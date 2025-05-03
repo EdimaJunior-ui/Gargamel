@@ -1,0 +1,138 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz - Os Escritores da Liberdade</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <!-- Elementos decorativos -->
+        <div class="pen-animation">
+            <div class="pen"></div>
+            <div class="pen-tip"></div>
+        </div>
+        <div class="page-transition"></div>
+        <div class="chalk-lines"></div>
+        <div class="film-silhouettes">
+            <div class="silhouette silhouette-1"></div>
+            <div class="silhouette silhouette-2"></div>
+        </div>
+        
+        <!-- Botão de Modo Noturno (será adicionado pelo JS) -->
+        
+        <!-- Start Menu -->
+        <section id="start-menu" class="active">
+            <div class="score-display">
+                <span id="score">0</span> pontos
+            </div>
+            <div class="title">
+                <h1>Os Escritores da Liberdade</h1>
+                <div class="subtitle">Quiz Interativo</div>
+            </div>
+            <div class="quote">
+                <p>"Não importa o que os outros façam. Importa o que você faz. A sua vida é sua responsabilidade."</p>
+                <span class="quote-author">- Erin Gruwell</span>
+            </div>
+            <div class="buttons">
+                <button id="start-button" class="btn">Iniciar Quiz</button>
+                <button id="collaborators-button" class="btn">Colaboradores</button>
+                <!-- Botões adicionais serão inseridos pelo JS -->
+            </div>
+        </section>
+
+        <!-- Quiz Section -->
+        <section id="quiz-section" class="hidden">
+            <div class="score-display">
+                <span id="quiz-score">0</span> pontos
+            </div>
+            
+            <!-- Barra de Progresso -->
+            <div class="progress-container">
+                <div class="pencil-progress">
+                    <div class="pencil-icon"></div>
+                    <div class="progress-bar">
+                        <div class="progress"></div>
+                    </div>
+                </div>
+                <span class="progress-text">Pergunta <span id="current-question">1</span> de 10</span>
+            </div>
+            
+            <!-- Botão de Dica (será adicionado pelo JS) -->
+            
+            <div class="question-container">
+                <h2 id="question-text">Pergunta aqui</h2>
+                <div class="options-container">
+                    <button class="option-btn" data-index="0"></button>
+                    <button class="option-btn" data-index="1"></button>
+                    <button class="option-btn" data-index="2"></button>
+                    <button class="option-btn" data-index="3"></button>
+                </div>
+            </div>
+            <div class="navigation-buttons">
+                <button id="next-button" class="btn" disabled>Próxima Pergunta</button>
+                <button id="finish-button" class="btn hidden">Finalizar Quiz</button>
+            </div>
+        </section>
+
+        <!-- Results Section -->
+        <section id="results-section" class="hidden">
+            <div class="score-display">
+                <span id="final-score">0</span> pontos
+            </div>
+            <h2>Resultado Final</h2>
+            <div class="result-details">
+                <p>Você acertou <span id="correct-answers">0</span> de 10 perguntas!</p>
+                <div id="result-message"></div>
+            </div>
+            <div class="buttons">
+                <button id="restart-button" class="btn">Jogar Novamente</button>
+                <button id="back-to-menu-button" class="btn">Voltar ao Menu</button>
+            </div>
+        </section>
+
+        <!-- Collaborators Section -->
+        <section id="collaborators-section" class="hidden">
+            <div class="score-display">
+                <span id="collab-score">0</span> pontos
+            </div>
+            <h2>Colaboradores do Projeto</h2>
+            <div class="collaborators-list">
+                <!-- Add collaborators here -->
+                <div class="collaborator">
+                    <p class="collaborator-name">Edima Junior</p>
+                    <p class="collaborator-role">Criador do Site</p>
+                </div>
+                <div class="collaborator">
+                    <p class="collaborator-name">Isadora</p>
+                    <p class="collaborator-role">Criadora do Museu</p>
+                </div>
+				<div class="collaborator">
+                    <p class="collaborator-name">Mayra</p>
+                    <p class="collaborator-role">Colaboradora do Projeto</p>
+                </div>
+				<div class="collaborator">
+                    <p class="collaborator-name">Maria Alicia</p>
+                    <p class="collaborator-role">Colaboradora do Projeto</p>
+                </div>
+				<div class="collaborator">
+                    <p class="collaborator-name">Kahuane</p>
+                    <p class="collaborator-role">Colaboradora do Projeto</p>
+                </div>
+                <!-- Add more collaborators as needed -->
+            </div>
+            <button id="back-button" class="btn">Voltar ao Menu</button>
+        </section>
+        
+        <!-- Gallery Section (será gerado dinamicamente pelo JS) -->
+        
+        <!-- Learn More Section (será gerado dinamicamente pelo JS) -->
+    </div>
+</body>
+</html>
